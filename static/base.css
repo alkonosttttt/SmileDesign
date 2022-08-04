@@ -23,7 +23,7 @@ header {
     align-items: center;
     padding: 0 6%;
     height: 121px;
-    gap: 20px;
+    column-gap: 20px;
     flex-wrap: wrap;
     box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
 }
@@ -103,6 +103,7 @@ header {
 
     .menuIcon {
         display: block;
+        cursor: pointer;
     }
 
     #nav {
