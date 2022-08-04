@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - SmileDesign</title>
+    <link rel="shorcut icon" href="/static/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/static/base.css" type="text/css">
+</head>
+<body>
+<header>
+    <a href="#" id="logo">
+        <p id="logoFirstLine">Simple <span style="color: #BD7048">Design</span></p>
+        <p><span style="font-size: 10px;">дизайн интерьеров</span></p>
+    </a>
+    <div>
+        <img class="menuIcon" src="/static/menu.svg" alt="menu" onclick="menu()">
+        <nav id="nav">
+            <a href="#" class="navElement">Главная</a>
+            <a href="#" class="navElement">Тест</a>
+            <a href="#" class="navElement">Каталог</a>
+            <a href="#" class="navElement">О нас</a>
+            <a href="#" class="navElement">Цены</a>
+            <div id="mobilePhoneBlock">
+                <div class="phoneBlock">
+                    <a href="tel:+77005053000">
+                        <img src="/static/phoneIcon.svg" alt="phoneIcon">
+                        <p>+7 700 505 3000</p>
+                    </a>
+                    <p><span style="color: rgba(59,59,59,0.5);">с 9:00 до 18:00</span></p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="desktopPhoneBlock">
+        <div class="phoneBlock">
+            <a href="tel:+77005053000">
+                <img src="/static/phoneIcon.svg" alt="phoneIcon">
+                <p>+7 700 505 3000</p>
+            </a>
+            <p><span style="color: rgba(59,59,59,0.5);">с 9:00 до 18:00</span></p>
+        </div>
+    </div>
+
+
+
+
+</header>
+<main>
+
+</main>
+<footer>
+
+</footer>
+
+<script>
+function menu() {
+    document.getElementById("nav").classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

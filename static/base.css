@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+
+html,body,div,p,h1,header,nav,aside,footer,a,ul,li,input,form {
+    margin:0;padding:0;outline:0;border:0;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 121px;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoFirstLine {
+    font-weight: 600;
+}
+
+.menuIcon {
+    display: none;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.navElement {
+    cursor: pointer;
+    width: fit-content;
+    color: rgba(0,0,0,0.5);
+}
+
+.navElement::after {
+    content: "";
+    display: block;
+    margin-left: 40%;
+    width: 60%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.navElement:hover {
+    color: #BD7048;
+    font-weight: 600;
+}
+.navElement:hover::after {
+    content: "";
+    display: block;
+    margin-left: 40%;
+    width: 60%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #BD7048;
+}
+
+.phoneBlock {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: end;
+}
+
+.phoneBlock a {
+    color: #3B3B3B;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#mobilePhoneBlock {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 91px;
+        background-color: white;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    #nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+        top: 91px;
+        right: -100%;
+        width: 100%;
+        transition: 0.5s;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    #nav.active {
+        right: 0;
+        box-sizing: border-box;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #desktopPhoneBlock {
+        display: none;
+    }
+
+    #mobilePhoneBlock {
+        display: block;
+    }
+}
