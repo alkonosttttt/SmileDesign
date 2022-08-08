@@ -22,19 +22,19 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 6%;
-    height: 121px;
+    min-height: 121px;
+    background-color: white;
     column-gap: 20px;
-    flex-wrap: wrap;
     box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
 }
 
-#logo{
+.logo{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#logoFirstLine {
+.logoFirstLine {
     font-weight: 600;
 }
 
@@ -88,17 +88,49 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+
 }
-#mobilePhoneBlock {
+.mobileBlock {
     display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.whiteFooterBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    min-height: 215px;
+    background-color: white;
+    box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
+    padding: 0 6%;
+}
+.blackFooterBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 96px;
+    background-color: #262626;
+    padding: 0 6%;
+    color: white;
+    font-weight: 500;
 }
 
 
 @media screen and (max-width: 768px) {
 
     header {
-        height: 91px;
-        background-color: white;
+        min-height: 91px;
+        flex-wrap: wrap;
     }
 
     .menuIcon {
@@ -125,13 +157,27 @@ header {
         box-sizing: border-box;
         padding-left: 6%;
         padding-right: 6%;
+        background-color: white;
+        z-index: 10;
     }
 
-    #desktopPhoneBlock {
+   .desktopBlock {
         display: none;
     }
 
-    #mobilePhoneBlock {
+    .mobileBlock {
         display: block;
+    }
+
+    .footerNav {
+        display: none;
+    }
+
+    .whiteFooterBlock {
+        min-height: 120px;
+    }
+
+    .blackFooterBlock {
+        min-height: 99px;
     }
 }
