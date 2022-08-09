@@ -148,13 +148,16 @@ footer {
     }
 
     #nav {
+        background-color: white;
+        z-index: 20;
+        padding-left: 6%;
         position: fixed;
         display: flex;
         flex-direction: column;
         height: 100%;
         overflow-y: auto;
         top: 91px;
-        right: -100%;
+        right: -106%;
         width: 100%;
         transition: 0.5s;
         gap: 20px;
