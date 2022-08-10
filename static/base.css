@@ -109,7 +109,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
     flex-wrap: wrap;
     min-height: 215px;
     background-color: white;

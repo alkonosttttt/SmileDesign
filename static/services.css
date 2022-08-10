@@ -192,7 +192,63 @@ h2 {
     padding-left: 20px;
 }
 
+.questions {
+    padding: 0 6%;
+}
+.accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+}
 
+.accordionItem {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+}
+
+.accordionQuestion {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 30px;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 100px;
+    height: 91px;
+    background-color: #FAFAFA;
+    padding: 0 25px;
+}
+
+.accordionAnswer {
+    color: rgba(26, 26, 26, 0.7);
+    font-weight: 500;
+    padding-left: 28px;
+    display: none;
+}
+
+.accordionCloseIcon {
+    transform: rotate(45deg);
+    display: none;
+}
+
+.accordionOpenIcon {
+    display: block;
+}
+
+
+/* открыть и закрыть ответ на вопрос*/
+
+.accordionBlock .accordionCloseIcon {
+    display: block;
+}
+.accordionBlock .accordionAnswer {
+    display: block;
+}
+.accordionNone .accordionOpenIcon {
+    display: none;
+}
 
 
 
@@ -263,6 +319,7 @@ h2 {
 
     .oneExtraService {
         min-width: auto;
+        font-size: 15px;
     }
     .oneExtraService p {
         padding-bottom: 20px;
@@ -272,6 +329,7 @@ h2 {
     .extraServicesList::-webkit-scrollbar {
         width: 3px;
         height: 6px;
+        cursor: pointer;
 
     }
     .extraServicesList::-webkit-scrollbar-track {
@@ -279,15 +337,38 @@ h2 {
         border-radius: 8px;
         width: 3px;
         height: 6px;
+        cursor: pointer;
     }
     .extraServicesList::-webkit-scrollbar-thumb {
         background: #FFDBC9;
         border-radius: 8px;
         width: 3px;
         height: 6px;
+        cursor: pointer;
     }
 
     .extraServicePhoto {
         max-width: 255px;
+    }
+
+    .accordion {
+        row-gap: 17px;
+    }
+
+    .accordionItem {
+        font-size: 15px;
+        row-gap: 25px;
+    }
+    .accordionQuestion {
+        column-gap: 25px;
+        height: 49px;
+        padding: 0 12px;
+    }
+
+    .accordionAnswer {
+        padding-left: 15px;
+    }
+    .accordionCloseIcon, .accordionOpenIcon {
+        height: 30px;
     }
 }

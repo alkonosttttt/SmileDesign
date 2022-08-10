@@ -10,18 +10,18 @@
 </head>
 <body>
 <header>
-    <a href="#" class="logo">
+    <a href="" class="logo">
         <p class="logoFirstLine">Simple <span style="color: #BD7048">Design</span></p>
         <p><span style="font-size: 10px;">дизайн интерьеров</span></p>
     </a>
     <div>
         <img class="menuIcon" src="/static/menu.svg" alt="menu" onclick="menu()">
         <nav id="nav">
-            <a href="#" class="navElement">Главная</a>
-            <a href="#" class="navElement">Тест</a>
-            <a href="#" class="navElement">Каталог</a>
-            <a href="#" class="navElement">О нас</a>
-            <a href="#" class="navElement">Цены</a>
+            <a href="" class="navElement">Главная</a>
+            <a href="" class="navElement">Тест</a>
+            <a href="" class="navElement">Каталог</a>
+            <a href="" class="navElement">О нас</a>
+            <a href="" class="navElement">Цены</a>
             <div class="PhoneBlock mobileBlock">
                 <div class="phoneBlock">
                     <a href="tel:+77005053000">
@@ -178,7 +178,7 @@
         </section>
 
         <section class="extraServices">
-           <h2>Дополнительные услуги</h2>
+            <h2>Дополнительные услуги</h2>
             <div class="extraServicesList">
                 <div class="oneExtraService">
                     <a href="#">
@@ -206,6 +206,43 @@
                 </div>
             </div>
         </section>
+
+        <section class="questions">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="accordion">
+                <article class="accordionItem">
+                    <div class="accordionQuestion">
+                        <img src="/static/openAnswer.svg" alt="openAnswer" class="accordionOpenIcon">
+                        <img src="/static/closeAnswer.svg" alt="closeAnswer" class="accordionCloseIcon">
+                        <p>Вопрос</p>
+                    </div>
+                    <div class="accordionAnswer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada nibh at ornare turpis sit lacus,
+                            in viverra volutpat. Id sed quam consectetur condimentum tellus pellentesque a, convallis metus.
+                            Hac dui sit cursus ac id aliquet. A convallis suspendisse in nulla risus, senectus vitae. Condimentum in aliquet egestas
+                            aliquam at eu. Id bibendum iaculis netus ipsum quis amet lectus nisi mattis.
+                            Sit porttitor a vulputate aliquam elementum, odio lacus.
+                        </p>
+                    </div>
+                </article>
+                <article class="accordionItem">
+                    <div class="accordionQuestion">
+                        <img src="/static/openAnswer.svg" alt="openAnswer" class="accordionOpenIcon" onclick="OpenAccordion()">
+                        <img src="/static/closeAnswer.svg" alt="closeAnswer" class="accordionCloseIcon" onclick="CloseAccordion()">
+                        <p>Вопрос</p>
+                    </div>
+                    <div class="accordionAnswer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada nibh at ornare turpis sit lacus,
+                            in viverra volutpat. Id sed quam consectetur condimentum tellus pellentesque a, convallis metus.
+                            Hac dui sit cursus ac id aliquet. A convallis suspendisse in nulla risus, senectus vitae. Condimentum in aliquet egestas
+                            aliquam at eu. Id bibendum iaculis netus ipsum quis amet lectus nisi mattis.
+                            Sit porttitor a vulputate aliquam elementum, odio lacus.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </div>
 </main>
 <footer>
@@ -245,6 +282,16 @@
 function menu() {
     document.getElementById("nav").classList.toggle('active');
 }
+
+document.querySelectorAll('.accordionQuestion').forEach((item)=>
+    item.addEventListener('click',() => {
+        const parent = item.parentNode;
+        parent.classList.toggle('accordionBlock');
+        parent.classList.toggle('accordionNone');
+    })
+)
+
+
 </script>
 
 </body>
