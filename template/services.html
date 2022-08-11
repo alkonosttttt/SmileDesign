@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="serviceButtons">
-                        <button type="submit" class="buttonToCart">
+                        <button type="button" class="buttonToCart">
                             <img src="/static/basketButtonIcon.svg" alt="basket">
                             <p>В корзину</p>
                         </button>
@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="serviceButtons">
-                        <button type="submit" class="buttonToCart">
+                        <button type="button" class="buttonToCart">
                             <img src="/static/basketButtonIcon.svg" alt="basket">
                             <p>В корзину</p>
                         </button>
@@ -278,21 +278,8 @@
 
 </footer>
 
-<script>
-function menu() {
-    document.getElementById("nav").classList.toggle('active');
-}
 
-document.querySelectorAll('.accordionQuestion').forEach((item)=>
-    item.addEventListener('click',() => {
-        const parent = item.parentNode;
-        parent.classList.toggle('accordionBlock');
-        parent.classList.toggle('accordionNone');
-    })
-)
-
-
-</script>
+<script src="/js/index.js"></script>
 
 </body>
 </html>

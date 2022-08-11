@@ -1,0 +1,40 @@
+
+.video {
+    width: 100%;
+    height: 662px;
+    position: relative;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.videoOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.145) 0%, rgba(0, 0, 0, 0.5) 100%);
+    transition: all 0.5s ease;
+}
+
+.videoOverlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.videoPlay {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
